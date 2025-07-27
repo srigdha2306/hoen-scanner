@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<net.skyscanner.backpack.card.BpkCardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cornerStyle="large"
+        app:cardElevation="4dp"
+        android:layout_margin="16dp"
+        android:id="@+id/flightCard" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://schemas.android.com/apk/res/android">
+
+    <net.skyscanner.backpack.text.BpkText
+            android:id="@+id/flightNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Flight: SK123"
+            style="@style/bpkTextHeading4"/>
+</net.skyscanner.backpack.card.BpkCardView>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:id="@+id/main_layout"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:padding="16dp"
+              tools:context=".MainActivity" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://schemas.android.com/apk/res/android ">
+
+    <!-- Backpack Toolbar -->
+    <net.skyscanner.backpack.toolbar.BpkToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title="Search Flights"
+            app:showBackIcon="false"/>
+
+    <!-- Origin Field -->
+    <EditText
+            android:id="@+id/from_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="From"
+            android:drawableStart="@drawable/bpk_ic_flight_takeoff"
+            android:padding="12dp"
+            android:background="@drawable/bpk_input_background"/>
+
+    <!-- Destination Field -->
+    <EditText
+            android:id="@+id/to_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="To"
+            android:drawableStart="@drawable/bpk_ic_flight_land"
+            android:padding="12dp"
+            android:background="@drawable/bpk_input_background"
+            android:layout_marginTop="12dp"/>
+
+    <!-- Departure Date -->
+    <TextView
+            android:id="@+id/departure_date_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Departure Date"
+            android:layout_marginTop="20dp"
+            android:textStyle="bold"/>
+
+    <DatePicker
+            android:id="@+id/departure_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:calendarViewShown="true"/>
+
+    <!-- Search Button -->
+    <net.skyscanner.backpack.button.BpkButton
+            android:id="@+id/search_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Search"
+            app:bpkButtonType="primary"/>
+</LinearLayout>
